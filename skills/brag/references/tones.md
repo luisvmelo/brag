@@ -2,6 +2,8 @@
 
 Seven tones. Each changes scripting energy, pacing, typography personality, and transition style.
 
+Scene counts below assume a 15-25s video. For longer videos (up to 90 seconds), keep each tone's per-scene pacing and add scenes.
+
 ---
 
 ## `default`

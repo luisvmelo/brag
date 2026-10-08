@@ -41,11 +41,13 @@ Parse these options:
 |---|---|---|
 | `--tone` | preset or freeform description | inferred |
 | `--format` | `landscape`, `vertical`, `square` | `landscape` |
-| `--duration` | seconds | auto (15-25s) |
+| `--duration` | seconds, 15-90 | auto (15-25s) |
 | `--no-music` | flag | music on |
 | `--no-sfx` | flag | sfx on |
 | `--title` | string | inferred from project |
 | `--voice` | flag | narration off |
+
+Duration has a hard ceiling of 90 seconds (1:30). If `--duration` asks for more than 90, use 90 and tell the user. Without `--duration`, keep the 15-25s default unless the user asks for a longer video in natural language (e.g. "make it about a minute").
 
 Voice is opt-in. If `--voice` is present, use Kokoro via Hyperframes and do
 not add any provider-selection logic. The voice workflow is intentionally
@@ -103,7 +105,7 @@ Write `<output-dir>/brag-plan.md` (where `<output-dir>` is `brag-output/` or the
 
 When music is selected, include a compact `Music cue guidance` section: read the bundled track's cue preset from `<skill-dir>/assets/music/cues/` if present, otherwise note cues will be detected at composition time (any track now supports beat sync — see `references/audio.md`). Cue metadata is optional timing guidance only: story, readability, pacing, and product clarity stay primary.
 
-**Gate:** `<output-dir>/brag-plan.md` exists with a full storyboard. Scene durations sum to 15–25 seconds.
+**Gate:** `<output-dir>/brag-plan.md` exists with a full storyboard. Scene durations sum to the target duration: 15–25 seconds by default, never more than 90 seconds (1:30).
 
 ---
 
@@ -155,7 +157,7 @@ Always allow a freeform creative direction to refine or override the preset.
 
 These apply to every brag video regardless of tone.
 
-**Short.** 15–25 seconds. Not one second more without a reason.
+**Short.** 15–25 seconds by default. Up to 90 seconds (1:30) when the user asks for a longer video. Never more than 90 seconds, and not one second more than the content needs.
 
 **Readable.** Keep the pace high through motion and cuts, never by flashing text. Every line a viewer must read holds long enough to read it (short label ~0.8s settled; a sentence ~0.3s per word). Fast-in, then hold — never fast-in, then gone.
 
@@ -175,3 +177,5 @@ Hook (2-3s) → Reveal (2-4s) → 2-3 sharp highlights (5-12s) → Punchline/out
 ```
 
 Adapt this. Not every project needs exactly 3 highlights. The pattern is a starting shape, not a template.
+
+For longer videos (over 25s, up to 90s), keep the hook at 2-3s and the outro at 2-4s. Spend the extra time on more highlights (each 4-10s), not on stretching every scene.

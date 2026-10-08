@@ -226,6 +226,8 @@ All tracks are "Happy Beats / Business Moves" by ende.app. Upbeat, clean, corpor
 | `happy-beats-business-moves-vol-11-by-ende-dot-app.mp3` | 1:28 | Warm and business-y | `yc-parody`, `app-store` |
 | `happy-beats-business-moves-vol-12-by-ende-dot-app.mp3` | 1:58 | Steady and clean | `polished`, `cinematic` |
 
+The music must last the whole video. For videos longer than a minute, pick a track at least as long as the video: vol-10 (1:00) covers up to 60s, vol-11 (1:28) up to 88s, and vol-1, vol-9 or vol-12 cover the full 90s.
+
 For `deadpan` tone: prefer vol-12 at very low volume (0.12-0.18). Skip music only if the plan explicitly chooses silence.
 
 ### In a composition
@@ -250,6 +252,8 @@ Beat sync needs a cue source. Three are available — use the richest one the en
 <skill-dir>/assets/music/cues/<track-stem>.music-cues.md
 <skill-dir>/assets/music/cues/<track-stem>.music-cues.json
 ```
+
+The markdown summary only covers the first 20-25 seconds. For longer videos (up to 90s), read `beats` and `strongCues` past that point from the JSON, which covers the whole track. When running `analyze_music_cues.py` for a longer video, pass `--window-duration <video seconds>` so the summary covers the full length.
 
 2. **Any track → extended analysis (richest for custom tracks; needs Python, any Hyperframes version).** For a custom track — or to refresh a bundled one — run `analyze_music_cues.py` on the audio file. It produces the same rich cue JSON/Markdown for any track. Run it via `uv`, which auto-provisions the deps (`librosa`, `numpy`, `scipy`, `soundfile`) from `<skill-dir>/scripts/pyproject.toml` — no manual `pip install` needed:
 
@@ -284,7 +288,7 @@ Planning rules (apply to whichever source you have):
 - Use cue metadata to bias timing, not control it.
 - Major reveals may move toward strong cues within about `±0.15s`.
 - Smaller entrances may align to nearby beat points within about `±0.10s`.
-- Use 1-3 strong cue locks per 15-25s video.
+- Use 1-3 strong cue locks per 15-25s video; add about one per extra 15s in longer videos (up to 90s).
 - Ignore cues when they harm copy readability, scene pacing, or the product story.
 - For deadpan or restraint-heavy tones, cues should be rare, quiet, or saved for the final logo.
 

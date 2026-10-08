@@ -99,7 +99,7 @@ The default pattern is:
 Hook → Reveal → 2-3 highlights → Punchline/outro
 ```
 
-But adapt it. These are the right scene counts for each tone:
+But adapt it. These are the right scene counts for each tone in a 15-25s video. For longer videos (up to 90s), add scenes at the same per-scene pacing instead of stretching each scene:
 
 | Tone | Scenes | Pacing |
 |---|---|---|
@@ -113,11 +113,13 @@ But adapt it. These are the right scene counts for each tone:
 
 ## Duration guidance
 
-Scene durations must sum to 15-25 seconds. Count them.
+Scene durations must sum to the target duration. Count them.
 
+- Default target: 15-25 seconds. 18-22 seconds is the sweet spot for most brag videos.
+- Longer target: when the user asks (`--duration` or natural language), up to 90 seconds (1:30).
 - Under 15 seconds: too thin, add a scene or lengthen holds.
-- Over 25 seconds: cut a scene or tighten timing.
-- 18-22 seconds is the sweet spot for most brag videos.
+- Over the target: cut a scene or tighten timing.
+- Hard ceiling: 90 seconds. Never plan past it.
 
 ## Reading time (keep the pace, not at text's expense)
 
