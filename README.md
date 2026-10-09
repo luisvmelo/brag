@@ -1,5 +1,13 @@
 # /brag
 
+> [!IMPORTANT]
+> **Esta é uma cópia adaptada, não um projeto próprio.**
+> Todo o mérito do `/brag` é de **[Shunit Haviv Hakimi](https://github.com/shunithaviv)** e de quem contribuiu com o projeto original, **[latent-spaces/brag](https://github.com/latent-spaces/brag)** (licença MIT): [anukulKun](https://github.com/anukulKun), [Zoroo2626](https://github.com/Zoroo2626) e [ShantanuTaro](https://github.com/ShantanuTaro). A animação é feita com o [Hyperframes](https://hyperframes.heygen.com/) (HeyGen), os efeitos sonoros são da [Kenney](https://kenney.nl/) e as músicas são da série "Happy Beats / Business Moves" da [ende.app](https://ende.app/en).
+>
+> A única alteração feita aqui foi ampliar o limite de duração dos vídeos de 25 s para até 90 s (1:30), para uso interno de um time. Todo o resto (código, instruções, materiais e ideia) é do projeto original. Para usar, aprender ou contribuir, prefira o [repositório original](https://github.com/latent-spaces/brag).
+>
+> *This is an adapted copy, not an original project. All credit for `/brag` belongs to Shunit Haviv Hakimi and the contributors of [latent-spaces/brag](https://github.com/latent-spaces/brag) (MIT License). The only change here raises the maximum video length from 25 s to 90 s for internal team use. Please use and contribute to the original repository.*
+
 **You built it. Now brag.**
 
 [![the /brag launch site — you built it, now brag](docs/assets/hero.png)](https://latent-spaces.github.io/brag/)
